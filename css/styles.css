@@ -42,8 +42,13 @@ header h1 {
   transition: border-color 0.3s ease-in-out;
 }
 
+#search-input:focus {
+  border-color: #0057ff;
+  outline: none;
+}
+
 #search-button {
-  background-color: #0057FF;
+  background-color: #0057ff;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -86,7 +91,7 @@ main {
 }
 
 #write-post-button {
-  background-color: #0057FF;
+  background-color: #0057ff;
   color: #fff;
   padding: 12px 24px;
   border: none;
@@ -166,12 +171,12 @@ main {
 
 #post-form input:focus,
 #post-form textarea:focus {
-  border-color: #0057FF;
+  border-color: #0057ff;
   outline: none;
 }
 
 #post-form button {
-  background-color: #0057FF;
+  background-color: #0057ff;
   color: #fff;
   padding: 12px 24px;
   border: none;
