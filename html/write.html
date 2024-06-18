@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>뽀용 일기 작성</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>뽀용 일기 작성</h1>
+      </header>
+      <main>
+        <form id="post-form" aria-labelledby="post-form-heading">
+          <h2 id="post-form-heading">새로운 뽀용 일기 작성</h2>
+          <label for="author">작성자:</label>
+          <input type="text" id="author" required />
+          <label for="title">제목:</label>
+          <input type="text" id="title" required />
+          <label for="content">내용:</label>
+          <textarea id="content" rows="4" required></textarea>
+          <label for="images">사진 첨부 </label>
+          <input type="file" id="images" accept="image/*" multiple />
+          <p id="file-count-message" style="color: red"></p>
+          <button type="submit">업로드하기</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="../js/write.js"></script>
+  </body>
+</html>

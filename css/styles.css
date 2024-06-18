@@ -1,0 +1,264 @@
+/* 컨테이너 스타일 */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+.container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 헤더 스타일 */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 검색 바 스타일 */
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#search-button {
+  background-color: #0057FF;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 포스트 목록 스타일 */
+#post-list {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #fafafa;
+}
+
+.post {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.post h3 {
+  font-size: 1.5rem; /* 제목 크기 키우기 */
+  margin-bottom: 5px;
+}
+
+.post .author,
+.post .date {
+  font-size: 0.9rem; /* 작성자 이름 크기 줄이기 */
+  color: #666; /* 회색으로 조정 */
+  margin-bottom: 5px; /* 작성자와 제목 사이 간격 조정 */
+}
+
+#write-post-button {
+  background-color: #0057FF;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#write-post-button:hover {
+  background-color: rgba(43, 43, 246, 0.635);
+}
+
+.post-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.post-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.post-buttons .edit-button {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.post-buttons .edit-button:hover {
+  background-color: #1976d2;
+}
+
+.post-buttons .delete-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.post-buttons .delete-button:hover {
+  background-color: #e53935;
+}
+
+.post-buttons .view-button {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.post-buttons .view-button:hover {
+  background-color: #fb8c00;
+}
+
+#post-form {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+#post-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+#post-form input[type="text"],
+#post-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#post-form input:focus,
+#post-form textarea:focus {
+  border-color: #0057FF;
+  outline: none;
+}
+
+#post-form button {
+  background-color: #0057FF;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#post-form button:hover {
+  background-color: skyblue;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  main {
+    gap: 10px;
+  }
+
+  #post-list,
+  #post-form {
+    padding: 10px;
+  }
+
+  #post-form button {
+    padding: 10px 20px;
+  }
+}
+
+.delete-button {
+  background-color: #f44336;
+  opacity: 80%;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+.edit-button {
+  background-color: #2196f3;
+  opacity: 80%;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.edit-button:hover {
+  background-color: #1976d2;
+}
+
+.view-detail-button {
+  background-color: #ff9800;
+  opacity: 80%;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.view-detail-button:hover {
+  background-color: #fb8c00;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+/* 게시물 상세 보기 페이지의 이미지 스타일 */
+.post-detail img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
