@@ -2,14 +2,6 @@
   max-width: 600px;
   margin: 20px auto;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.container:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -41,14 +33,16 @@ form label {
   color: #555;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   padding: 12px;
-  border: 1px solid #ddd;
   border-radius: 6px;
+  border: 1px solid #ddd;
   transition: border-color 0.3s ease-in-out;
 }
 
-form input:focus, form textarea:focus {
+form input:focus,
+form textarea:focus {
   border-color: #4caf50;
   outline: none;
 }
@@ -66,7 +60,7 @@ form textarea {
 
 .button-group button {
   padding: 12px 24px;
-  background-color: #4caf50;
+  background-color: #0057ff;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -74,22 +68,13 @@ form textarea {
   transition: background-color 0.3s ease-in-out;
 }
 
-.button-group button:hover {
-  background-color: #45a049;
-}
-
 .button-group button:last-child {
   background-color: #f44336;
 }
 
-.button-group button:last-child:hover {
-  background-color: #e53935;
-}
-
 /* 전체 페이지 스타일 */
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f0f0f0;
   padding: 20px;
 }

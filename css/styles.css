@@ -1,20 +1,10 @@
-/* 컨테이너 스타일 */
 .container {
   max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
   position: relative;
 }
-
-.container:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* 헤더 스타일 */
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -27,7 +17,6 @@ header h1 {
   letter-spacing: 1px;
 }
 
-/* 검색 바 스타일 */
 .search-container {
   display: flex;
   gap: 10px;
@@ -64,12 +53,10 @@ main {
   gap: 20px;
 }
 
-/* 포스트 목록 스타일 */
 #post-list {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 15px;
-  background-color: #fafafa;
 }
 
 .post {
@@ -183,10 +170,6 @@ main {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
-}
-
-#post-form button:hover {
-  background-color: skyblue;
 }
 
 @media screen and (max-width: 600px) {
