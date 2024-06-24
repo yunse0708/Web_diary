@@ -1,14 +1,32 @@
 function handlePostFormSubmit(event) {
   event.preventDefault();
 
-  const author = document.getElementById("author").value;
-  const title = document.getElementById("title").value;
-  const content = document.getElementById("content").value;
+  const author = document.getElementById("author").value.trim();
+  const title = document.getElementById("title").value.trim();
+  const content = document.getElementById("content").value.trim();
   const images = document.getElementById("images").files;
+
+  if (!author) {
+    alert("작성자를 입력하세요.");
+    document.getElementById("author").focus();
+    return;
+  }
+
+  if (!title) {
+    alert("제목을 입력하세요.");
+    document.getElementById("title").focus();
+    return;
+  }
+
+  if (!content) {
+    alert("내용을 입력하세요.");
+    document.getElementById("content").focus();
+    return;
+  }
 
   if (images.length > 2) {
     document.getElementById("file-count-message").textContent =
-      "사진은 최대 1개까지 첨부할 수 있습니다.";
+      "사진은 최대 2개까지 첨부할 수 있습니다.";
     return;
   }
 
@@ -22,14 +40,16 @@ function handlePostFormSubmit(event) {
   };
 
   if (images.length > 0) {
-    const reader = new FileReader();
-    reader.onload = function (event) {
-      newPost.images.push(event.target.result);
-      if (newPost.images.length === images.length) {
-        savePost(newPost);
-      }
-    };
+    let loadedImages = 0;
     for (let i = 0; i < images.length; i++) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        newPost.images.push(event.target.result);
+        loadedImages++;
+        if (loadedImages === images.length) {
+          savePost(newPost);
+        }
+      };
       reader.readAsDataURL(images[i]);
     }
   } else {
@@ -50,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const imageInput = document.getElementById("images");
   imageInput.addEventListener("change", () => {
-    if (imageInput.files.length > 1) {
+    if (imageInput.files.length > 2) {
       document.getElementById("file-count-message").textContent =
         "사진은 최대 2개까지 첨부할 수 있습니다.";
     } else {
